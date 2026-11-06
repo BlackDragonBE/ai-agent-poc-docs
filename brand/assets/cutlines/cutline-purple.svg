@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="1795.95000 703.95000 368.10024 368.10000" width="368.10024" height="368.10000"><title>cutline-purple</title><defs>
+<clipPath id="clip_1">
+<path transform="matrix(1,0,0,-1,0,1440)" d="M0 0H2560V1440H0Z" />
+</clipPath>
+<clipPath id="clip_2">
+<path transform="matrix(1,0,0,-1,0,1440)" d="M0 0H2560V1440H0Z" />
+</clipPath>
+<clipPath id="clip_3">
+<path transform="matrix(1,0,0,-1,0,1440)" d="M0 0H2560V1440H0Z" />
+</clipPath>
+</defs>
+<path transform="matrix(1,0,0,-1,0,1440)" d="M2164 736H1796V368H2164Z" fill="#ffffff" />
+<path transform="matrix(1,0,0,-1,1796.0005,1067.0004)" d="M0 0 235.028 72.879 0 163.182Z" fill="#123378" />
+<path transform="matrix(1,0,0,-1,2031.0282,994.1211)" d="M0 0 132.972-51.091V41.233Z" fill="#b899f0" />
+<path transform="matrix(1,0,0,-1,1796.0005,1067.0004)" d="M0 0V-4.999H367.999V21.788L235.028 72.879Z" fill="#7870e3" />
+</svg>

@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="nl" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Vergelijk de organisatiekosten van Codex, Claude Code, Copilot, Lurus en omp. Verken seats, Copilot-combinaties, modelprijzen en tokenonderzoek met interactieve rekenhulpen.">
+<title>Coding agents — grip op kosten</title>
+<link rel="stylesheet" href="../ai-basics/begrippen-interactief/css/basis.css">
+<link rel="stylesheet" href="css/kosten.css">
+<script src="js/gegevens.js" defer></script>
+<script src="js/kosten.js" defer></script>
+</head>
+<body>
+<a class="overslaan" href="#inhoud">Naar de kostenvergelijking</a>
+<header class="site-kop">
+  <a class="site-naam" href="../ai-basics/begrippen-interactief/index.html" aria-label="AI in de praktijk: begrippen"><span class="terminal-merk" aria-hidden="true">&gt;_</span><span>AI in de praktijk<small>De kostenverkenner</small></span></a>
+  <h1>Coding agents <em>grip op kosten</em></h1>
+  <div class="kop-acties"><a href="../agent-comparison/index.html">Functies vergelijken</a><a href="README.md">Volledig onderzoek ↗</a><button id="thema" class="icoon-knop" type="button" aria-label="Donkere weergave inschakelen" hidden>◐</button></div>
+</header>
+<main class="wrap-kosten" id="inhoud" tabindex="-1">
+  <noscript><p class="hint">Deze verkenner gebruikt JavaScript voor kaarten en berekeningen. <a href="README.md">Lees alle bevindingen en bronnen in het kostendocument.</a></p></noscript>
+  <nav class="weergaven" aria-label="Kostenonderwerpen" hidden>
+    <button class="weergave-knop" type="button" data-view="instap" aria-current="true" aria-controls="instap">01 <span>Instapprijzen</span></button>
+    <button class="weergave-knop" type="button" data-view="plannen" aria-controls="plannen">02 <span>Plannen & beheer</span></button>
+    <button class="weergave-knop" type="button" data-view="modellen" aria-controls="modellen">03 <span>Model & verbruik</span></button>
+    <button class="weergave-knop" type="button" data-view="bewijs" aria-controls="bewijs">04 <span>Tokens vs. omp</span></button>
+  </nav>
+
+  <section id="instap" class="paneel" aria-labelledby="instap-titel">
+    <div class="sectie-kop"><div><p class="eyebrow">Betaalroutes voor coding-tools</p><h2 id="instap-titel">Abonnement of betalen naar gebruik?</h2><p class="subtitel">Vergelijk wat je afneemt: organisatieabonnement, persoonlijk abonnement of gedeelde wallet.</p></div></div>
+    <details class="verdieping" id="instap-scenario" hidden>
+      <summary id="instap-samenvatting">10 gebruikers · maandbetaling — pas scenario aan</summary>
+      <div class="instellingen" id="instap-controls">
+        <label class="veld" for="teamgrootte"><span>Gebruikers</span><input id="teamgrootte" type="number" min="1" max="10000" step="1" value="10" inputmode="numeric"></label>
+        <fieldset class="keuze"><legend>Betaalritme</legend><div class="segment" id="betaalritme"><button type="button" data-annual="false" aria-pressed="true">Maandelijks</button><button type="button" data-annual="true" aria-pressed="false">Jaarbetaling</button></div></fieldset>
+        <p class="mini-noot">Het aantal rekent de drie organisatieabonnementen door. Lurus toont de persoonlijke Pro-instap, geen teamtotaal. Alle betaalroutes staan bij Plannen & beheer. Jaarprijzen alleen waar gepubliceerd; USD en EUR blijven apart. Zonder btw, wisselkoers of gebruikskosten.</p>
+      </div>
+    </details>
+    <p id="instap-fout" class="foutmelding" role="alert" hidden></p>
+    <div id="prijskaarten" class="prijskaarten" aria-label="Instapprijs en betaalroute per product"></div>
+    <article class="harness-keuze" aria-labelledby="omp-keuze-titel">
+      <div><p class="eyebrow">Losse harness, geen modelabonnement</p><h3 id="omp-keuze-titel">omp is de harness, niet je modelaanbieder.</h3><p>Geen omp-abonnement. Je kiest zelf de modeltoegang, bijvoorbeeld via OpenAI, Anthropic, een gateway of een lokaal model.</p></div>
+      <div class="harness-route" role="img" aria-label="omp koppelt via een gekozen toegangsroute aan modellen"><strong>omp</strong><span aria-hidden="true">→</span><span>API, gateway of toegestane loginroute</span><span aria-hidden="true">→</span><strong>Modellen</strong></div>
+      <p class="mini-noot">Modelkosten en eventuele tegoeden horen bij die route; infrastructuur en beheer blijven apart. Codex en Claude Code zijn óók harnesses. Technische loginondersteuning bewijst niet dat ieder abonnement in omp mag worden gebruikt.</p>
+      <button class="detail-knop" id="omp-details" type="button" hidden>Modeltoegang & abonnementsvoorwaarden →</button>
+    </article>
+    <div class="hint"><strong>Geen algemene winnaar op maandkosten.</strong><p>Geen seatvergoeding betekent niet gratis modelgebruik. Een abonnement is evenmin een onbeperkte tokenbundel.</p></div>
+    <div class="split">
+      <article class="uitlegkaart"><p class="eyebrow">Zo lees je de rekening</p><h3>Drie lagen, één begroting</h3><div class="stappen"><div class="stap"><span class="stap-nummer">1</span><div><strong>Vaste toegang</strong><p>Seats en eventuele verplichte platformlicenties.</p></div></div><div class="stap"><span class="stap-nummer">2</span><div><strong>Modelgebruik</strong><p>Inbegrepen limieten, credits of een volledig lopende meter.</p></div></div><div class="stap"><span class="stap-nummer">3</span><div><strong>Uitvoering & beheer</strong><p>Cloudcompute, tools, opslag, inrichting en menselijke controle.</p></div></div></div></article>
+      <article class="uitlegkaart"><p class="eyebrow">Begin met je vraag</p><h3>Waar wil je duidelijkheid over?</h3><div class="stappen"><button class="detail-knop" type="button" data-open-view="plannen">Welke plannen bieden centraal beheer? <span aria-hidden="true">→</span></button><button class="detail-knop" type="button" data-open-view="modellen">Wat kosten dezelfde tokens? <span aria-hidden="true">→</span></button><button class="detail-knop" type="button" data-open-view="bewijs">Is omp echt zuiniger? <span aria-hidden="true">→</span></button></div><p class="mini-noot">Persoonlijke Pro/Plus-abonnementen zijn geen vervanging voor centraal organisatiebeheer. Bekijk de voorwaarden per kaart.</p></article>
+    </div>
+  </section>
+
+  <section id="plannen" class="paneel" aria-labelledby="plannen-titel" hidden>
+    <div class="sectie-kop"><div><p class="eyebrow">Dezelfde vragen, per product</p><h2 id="plannen-titel">Welke betaalroute past bij je team?</h2><p class="subtitel">Bekijk plannen, inbegrepen gebruik en centraal beheer. Kies een product voor de details.</p></div></div>
+    <div class="product-keuze" role="group" aria-label="Kies een product">
+      <button class="chip" type="button" data-product="codex" aria-pressed="true" aria-controls="product-dossier">Codex</button>
+      <button class="chip" type="button" data-product="claude" aria-pressed="false" aria-controls="product-dossier">Claude Code</button>
+      <button class="chip" type="button" data-product="copilot" aria-pressed="false" aria-controls="product-copilot">GitHub Copilot</button>
+      <button class="chip" type="button" data-product="lurus" aria-pressed="false" aria-controls="product-dossier">Lurus Code</button>
+    </div>
+    <section id="product-dossier" aria-labelledby="product-titel">
+      <h3 class="product-titel" id="product-titel"></h3>
+      <div class="hint"><strong>Centraal beheer</strong><p id="product-beheer"></p></div>
+      <div class="tabel-scroll" tabindex="0" role="region" aria-label="Plannen en beheer van het gekozen product">
+        <table class="product-plannen"><caption id="product-tabeltitel"></caption><thead><tr><th scope="col">Betaalroute</th><th scope="col">Maandbetaling</th><th scope="col">Jaarbetaling</th><th scope="col">Gebruik & beheer</th></tr></thead><tbody id="product-planregels"></tbody></table>
+      </div>
+      <p class="mini-noot">Vaste bedragen per gebruiker per maand, exclusief extra gebruik en btw. Jaarprijzen vereisen jaarbetaling; — betekent geen bevestigd jaartarief. API- en walletgebruik hebben geen vaste seatprijs.</p>
+      <div class="bron-links" id="product-bronnen"></div>
+      <button class="detail-knop" id="product-voorwaarden" type="button">Alle voorwaarden, limieten & alternatieven →</button>
+    </section>
+    <section id="product-copilot" aria-labelledby="copilot-titel" hidden>
+    <h3 class="product-titel" id="copilot-titel">GitHub Copilot: kies op functies</h3>
+    <p class="copilot-basis"><strong>Bij alle combinaties:</strong> centraal Copilot-beheer, Copilot CLI en VS Code-autocompletion. CLI, chat en agents gebruiken AI credits; inline completions en next-edit suggestions niet.</p>
+    <div class="copilot-keuze-layout" id="copilot-keuze-layout">
+    <form id="copilot-form" class="copilot-profiel">
+      <fieldset class="copilot-vereisten"><legend>1. Welke functies heb je nodig?</legend>
+        <p class="mini-noot">Alle aangevinkte eisen gelden tegelijk. Alleen bevestigde mogelijkheden tellen als match.</p>
+        <div id="copilot-functies" class="copilot-functies"></div>
+        <div class="copilot-voorkeuren">
+          <label class="veld" for="copilot-betaling"><span>AI-betaling</span><select id="copilot-betaling"><option value="any">Geen voorkeur</option><option value="included">Met inbegrepen AI-tegoed</option><option value="metered">Alle AI-gebruik apart betalen</option></select></label>
+          <div><label class="check-veld"><input id="copilot-sales" type="checkbox"><span>Toon ook routes via een accountteam</span></label><p class="mini-noot">Access en Standalone vereisen toelating tot het sales-managed aanbod. Aanvinken is geen bewijs dat je in aanmerking komt.</p></div>
+        </div>
+        <details class="verdieping" id="copilot-gebruik"><summary id="copilot-gebruik-samenvatting">AI-gebruik: $19 per persoon / maand — pas aan</summary><div class="details-inhoud">
+          <label class="veld" for="ai-gebruik"><span>Aangenomen AI-gebruik per persoon / maand (USD)</span><input id="ai-gebruik" type="number" min="0" max="1000000" step="any" value="19" inputmode="decimal"></label>
+          <p class="mini-noot">Verbruikswaarde vóór inbegrepen credits. Jouw aanname, geen voorspelling uit tokens of werkdagen.</p>
+          <div class="chip-rij" role="group" aria-label="Voorbeeld van maandgebruik"><button class="chip" type="button" data-usage="5">Licht · $5</button><button class="chip" type="button" data-usage="19">$19</button><button class="chip" type="button" data-usage="50">Intensief · $50</button></div>
+        </div></details>
+      </fieldset>
+    </form>
+    <div class="copilot-resultaten">
+      <fieldset class="copilot-scenario"><legend>2. Voor hoeveel gebruikers?</legend>
+        <label class="veld" for="aantal-gebruikers"><span>Aantal gebruikers</span><input id="aantal-gebruikers" type="number" min="1" max="10000" value="10" step="1" inputmode="numeric"></label>
+        <p class="mini-noot">Iedereen krijgt Copilot én het GitHub-platform van de gekozen combinatie. De vergelijking toont de volledige kosten, niet alleen een toeslag op bestaande licenties.</p>
+      </fieldset>
+      <p class="foutmelding" id="copilot-fout" role="alert" hidden></p>
+    <div class="vergelijk-kop"><h4>3. Vergelijk passende combinaties</h4><p id="copilot-matches" role="status"></p></div>
+    <div class="hint" id="copilot-geen" hidden><strong>Geen passende combinatie.</strong><p>Alle vereisten moeten tegelijk bevestigd zijn. Voor volledig verbruiksgebaseerde AI-betaling moet je ook de routes via een accountteam tonen; toelating blijft vereist.</p></div>
+    <div class="tabel-scroll copilot-matrix" id="copilot-vergelijking" tabindex="0" role="region" aria-label="Passende Copilot-combinaties naast elkaar">
+      <table><caption id="copilot-vergelijk-titel"></caption><thead id="copilot-matrix-kop"></thead><tbody id="copilot-matrix-regels"></tbody></table>
+    </div>
+    <p class="mini-noot" id="copilot-onbevestigd" hidden>SAML/SCIM voor Standalone is niet bevestigd in de bekeken bron: dat is geen bewezen afwezigheid, maar telt niet als match wanneer je SSO vereist. Standalone zelf bevat geen GitHub-repositoryrechten.</p>
+    <details class="verdieping" id="copilot-details">
+      <summary id="copilot-details-samenvatting">Berekening & beheer van de gekozen combinatie</summary>
+      <article class="resultaatkaart" aria-labelledby="copilot-resultaat-titel">
+        <h4 id="copilot-resultaat-titel">GitHub Free + Copilot Business</h4>
+        <p class="totaal-label">Totaal per maand</p><p class="totaal-bedrag" id="copilot-totaal">—</p><p class="totaal-noot">Volledige platformkosten + Copilot + AI-meerverbruik. Exclusief compute, btw en andere diensten. Geen bevestigd jaarabonnement of jaarkorting.</p>
+        <dl class="rekening"><div><dt>GitHub-platform</dt><dd id="kosten-platform">—</dd></div><div><dt>Copilot-licenties</dt><dd id="kosten-seats">—</dd></div><div><dt>AI-gebruik boven tegoed</dt><dd id="kosten-over">—</dd></div></dl>
+        <p class="callout-klein" id="copilot-tegoed"></p><p class="callout-klein" id="copilot-toelating" hidden></p>
+        <div class="stat-paar"><div><p class="eyebrow">Identiteit</p><p id="copilot-identiteit"></p></div><div><p class="eyebrow">Beheer</p><p id="copilot-beheer"></p></div></div>
+      </article>
+    </details>
+    <div class="bron-links" id="copilot-bronnen"></div>
+    </div>
+    </div>
+    <p class="mini-noot">Voor beide: seat toewijzen, met het juiste account aanmelden en beheerdersbeleid toestaan. Autocompletion blijft werken bij een AI-budget van $0; CLI-/chatgebruik kan worden gestopt. <a href="https://docs.github.com/en/copilot/concepts/billing-and-usage/organizations-and-enterprises/billing">Billingregels ↗</a></p>
+    <details class="verdieping"><summary>Free, Team en Enterprise Cloud: wat koop je voor het platform?</summary><div class="details-inhoud"><div class="tabel-scroll" tabindex="0" role="region" aria-label="GitHub-platformverschillen"><table><caption>Los van het Copilot-abonnement</caption><thead><tr><th scope="col">Platform</th><th scope="col">Prijs / gebruiker / maand</th><th scope="col">Waarvoor betaal je?</th></tr></thead><tbody><tr><th scope="row">Free</th><td>$0</td><td>Onbeperkt publieke/private repositories en medewerkers, teams en basisbeheer. Private samenwerking heeft beperkingen. 2FA verplichten kan; bedrijfs-SSO/SCIM niet.</td></tr><tr><th scope="row">Team</th><td>$4</td><td>Meer private-repositoryfuncties: verplichte reviews, beschermde branches, CODEOWNERS en websupport. Geen bedrijfs-SSO/SCIM.</td></tr><tr><th scope="row">Enterprise Cloud</th><td>$21</td><td>Multi-organisatiebeheer, SAML-SSO, SCIM en de optie Enterprise Managed Users. Niet automatisch ingericht en niet hetzelfde als Copilot Enterprise.</td></tr></tbody></table></div><p>GitHub Free is een volwaardige organisatie, niet Copilot Free. Advanced Security, extra compute/opslag en eventuele IdP-licenties blijven afzonderlijke kosten. <a href="https://docs.github.com/en/get-started/learning-about-github/githubs-plans">Planfuncties ↗</a></p></div></details>
+    <details class="verdieping"><summary>Wie beheert seats, beleid, budgetten en accounts?</summary><div class="details-inhoud"><ul><li><strong>Free/Team + Business:</strong> organisatie-eigenaren beheren gebruikers/teams via Settings → Copilot → Access; beleid en modellen via Policies / Models. Er zijn organisatiebudgetten.</li><li><strong>Enterprise Cloud:</strong> centraal beleid over organisaties; gebruikers-, costcenter- en enterprisebudgetten. Business/access kan rechtstreeks aan personen of enterpriseteams worden toegewezen. Copilot Enterprise wordt per organisatie ingeschakeld en daar verdeeld.</li><li><strong>Harde kostenstop:</strong> zet bij organisatie-/costcenter-/enterprisebudgetten “Stop usage when budget limit is reached” expliciet aan. Standaard is die optie uit. Gebruikersbudgetten op enterpriseniveau zijn wel harde limieten; seatkosten stoppen niet mee.</li><li><strong>Accounts:</strong> bij persoonlijke GitHub-accounts beheer je organisatietoegang, niet het account zelf. Enterprise Managed Users laat de identityprovider bedrijfsaccounts beheren; dit is een aparte inrichting met beperkingen op externe samenwerking.</li></ul><p><a href="https://docs.github.com/en/copilot/concepts/billing-and-usage/organizations-and-enterprises/budgets">Budgetten ↗</a> · <a href="https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-access/grant-access">Seats beheren ↗</a></p></div></details>
+    <details class="verdieping"><summary>Business, Enterprise, access en jaarbetaling: de kleine lettertjes</summary><div class="details-inhoud"><ul><li><strong>Business versus Enterprise:</strong> beide omvatten CLI, chat, agents, code review, MCP en organisatiebeleid. Enterprise biedt meer credits en prioriteit bij nieuwe modellen/functies; vereist Enterprise Cloud.</li><li><strong>Access/Standalone:</strong> op de peildatum alleen voor toegelaten sales-managed enterprises. Geen inbegrepen AI credits. Standalone heeft geen betaalde Enterprise Cloud-gebruikerslicentie nodig; $10 dekt ook identiteit en beheer in die enterprisecontext, niet betaalde repositoryrechten.</li><li><strong>Migratie:</strong> oude Business/Enterprise-billing en nieuwe access-billing kunnen niet binnen dezelfde enterprise worden gemengd. Toelating en eventuele minimumcommitments bevestigen met het accountteam.</li><li><strong>Jaarbetaling:</strong> geen aparte openbare Copilot-organisatiejaarkorting vastgesteld. GitHub-platformjaarbetaling is afhankelijk van het volumeplan/contract; de rekenhulp gebruikt de gepubliceerde maandprijzen. Twaalf keer de maandprijs is een begroting, geen jaarabonnement.</li></ul><p><a href="https://docs.github.com/en/copilot/get-started/whats-changing-with-github-enterprise-and-copilot">Access-voorwaarden ↗</a> · <a href="README.md#copilot">Volledige combinaties en jaarbegrotingen ↗</a></p></div></details>
+  </section>
+  </section>
+
+  <section id="modellen" class="paneel" aria-labelledby="modellen-titel" hidden>
+    <div class="sectie-kop"><div><p class="eyebrow">Dezelfde tokens, een andere rekening</p><h2 id="modellen-titel">Het model bepaalt de meter.</h2><p class="subtitel">Verken een tariefscenario. Dit is geen voorspelling van abonnementslimieten of taakkwaliteit.</p></div></div>
+    <div class="rekengrid">
+      <form class="invoerkaart" id="model-form"><h3>Model & tokenmix</h3>
+        <label class="veld" for="model-route"><span>Facturatieroute</span><select id="model-route"><option value="api">Directe API · USD</option><option value="lurus">Lurus · EUR na 100% opslag</option></select></label>
+        <label class="veld" for="model-keuze"><span>Model</span><select id="model-keuze"></select></label>
+        <p class="mini-noot">Alle hoeveelheden hieronder in <strong>miljoen tokens</strong>. Bijvoorbeeld 0,1 = 100.000. Inputcategorieën overlappen niet.</p>
+        <div class="veld-rij"><label class="veld" for="tokens-fresh"><span>Gewone input</span><input id="tokens-fresh" type="number" min="0" max="1000000" step="any" value="0" inputmode="decimal"></label><label class="veld" for="tokens-write"><span>Nieuwe cachewrites</span><input id="tokens-write" type="number" min="0" max="1000000" step="any" value="0.1" inputmode="decimal"></label><label class="veld" for="tokens-read"><span>Cachereads</span><input id="tokens-read" type="number" min="0" max="1000000" step="any" value="0.9" inputmode="decimal"></label><label class="veld" for="tokens-output"><span>Output incl. denken</span><input id="tokens-output" type="number" min="0" max="1000000" step="any" value="0.1" inputmode="decimal"></label></div>
+        <div class="chip-rij" role="group" aria-label="Illustratieve tokenmix"><button class="chip" type="button" data-cache="0">Voorbeeld zonder cachereads</button><button class="chip" type="button" data-cache="90">Voorbeeld 90% cachereads</button></div>
+        <p class="foutmelding" id="model-fout" role="alert" hidden></p>
+      </form>
+      <article class="resultaatkaart"><p class="eyebrow">Modelkosten van jouw tokenmix</p><p class="totaal-bedrag" id="model-totaal">—</p><p class="totaal-noot" id="model-volume"></p><dl class="rekening"><div><dt>Gewone input</dt><dd id="model-input-kosten">—</dd></div><div><dt>Cachewrites</dt><dd id="model-write-kosten">—</dd></div><div><dt>Cachereads</dt><dd id="model-read-kosten">—</dd></div><div><dt>Output</dt><dd id="model-output-kosten">—</dd></div></dl><p class="callout-klein" id="model-tariefnoot"></p><div class="bron-links" id="model-bronnen"></div><p class="mini-noot">Geen tools, cloudcompute, opslag, belasting of beschikbare credits verrekend. Geen valutaomrekening.</p></article>
+    </div>
+    <div class="hint"><strong>Minder betalen is niet altijd minder tokens.</strong><p>Een cacheread kan goedkoper zijn dan nieuwe input. De tokenhoeveelheid blijft gelijk. De rekenhulp bewijst niet welke harness jouw gekozen cacheverhouding haalt.</p></div>
+    <details class="verdieping"><summary>Bekijk modeltarieven en tariefgrenzen</summary><div class="details-inhoud"><div class="tabel-scroll" role="region" aria-label="Modeltarieven van de gekozen route" tabindex="0"><table><caption id="model-tabel-caption">Tarieven per miljoen tokens</caption><thead><tr><th scope="col">Model</th><th scope="col">Input</th><th scope="col">Cacheread</th><th scope="col">Cachewrite</th><th scope="col">Output</th></tr></thead><tbody id="model-tarieven"></tbody></table></div><p>Standaard interactieve tarieven, niet alle mogelijke tiers. Houd lange-contextprijzen, cachebewaartijd en regionale routes apart. Haiku 5.5 heeft boven 100k promptinput een hogere tier. De introductieprijzen van Gemini 4 Argon en 3.8 Flash veranderen respectievelijk op 1 december 2026 en 1 januari 2027. Copilot gebruikt zijn eigen rate card; de directe API-tabel rekent geen Copilot-seatcredits om.</p><p><a href="README.md#4-modelkosten-harness-en-model-apart-begroten">Alle tariefvoorwaarden ↗</a></p></div></details>
+    <details class="verdieping"><summary>Wat komt er nog bij? En kan een abonnement in omp?</summary><div class="details-inhoud"><ul><li><strong>Cloud en tools:</strong> Copilot-cloudsandboxes en Actions kunnen naast AI credits compute kosten. Een lokale CLI-sessie heeft geen verplichte cloudsandbox. Zoek-/MCP-diensten, hosting en menselijke correctie kunnen bij elke agent extra kosten geven.</li><li><strong>Lurus:</strong> de rekenhulp gebruikt 2× de gepubliceerde modelbasistarieven wegens de genoemde 100% opslag. Cachewrites en andere AI-functies zijn niet volledig in dit scenario opgenomen. Team-walletafschrijving contractueel bevestigen; individuele bonuscredits niet dubbel als korting tellen.</li><li><strong>omp:</strong> technische loginondersteuning bewijst geen toestemming om een abonnement te hergebruiken. Begroot de zakelijke API-route tenzij de specifieke integratie en organisatievoorwaarden zijn bevestigd. Anthropic-subscription-OAuth is niet de algemene route voor derdepartijclients.</li><li><strong>Losse API-creditvoordelen:</strong> eligible Business/Team-abonnementen kunnen extra API-credits bieden, maar die vergroten niet automatisch de native codingbundel. Codex via API-key en interactieve Claude Code zijn expliciet uitgesloten van hun genoemde voordeelroutes.</li><li><strong>Geen gegarandeerd organisatieplafond:</strong> lokale sessielimieten dekken niet noodzakelijk in-flight requests, helpers of achtergrondwerk. Stel ook providerbudgetten en policies in.</li></ul><p><a href="README.md#6-kan-omp-de-abonnementen-van-de-anderen-gebruiken">Authenticatie en licentiegrenzen ↗</a> · <a href="README.md#7-overige-kosten-die-niet-in-de-seatprijs-verdwijnen">Bijkomende kosten ↗</a></p></div></details>
+  </section>
+
+  <section id="bewijs" class="paneel" aria-labelledby="bewijs-titel" hidden>
+    <div class="sectie-kop"><div><p class="eyebrow">Metingen, geen marketingfactor</p><h2 id="bewijs-titel">omp is niet altijd zuiniger.</h2><p class="subtitel">Wissel tussen twee matched modelgroepen uit dezelfde studie. Vergelijk niet dwars door de groepen heen.</p></div><div class="segment" id="benchmark-keuze" role="group" aria-label="Modelgroep in de benchmark"><button type="button" data-benchmark="anthropic" aria-pressed="true">Anthropic-set</button><button type="button" data-benchmark="openai" aria-pressed="false">OpenAI-set</button></div></div>
+    <article class="benchmark-kaart"><div class="benchmark-kop"><div><p class="eyebrow">Gemiddeld input + output per run</p><h3 id="benchmark-titel"></h3></div><span class="badge">Strands · externe studie</span></div><p class="subtitel" id="benchmark-beschrijving"></p><div class="benchmark-rijen" id="benchmark-rijen" role="img" aria-label="Tokenvergelijking"></div><p class="benchmark-conclusie" id="benchmark-conclusie"></p><p class="benchmark-noot" id="benchmark-noot"></p><div class="bron-links" id="benchmark-bronnen"></div></article>
+    <div class="onbekend-grid"><article class="onbekend-kaart"><span class="monogram" aria-hidden="true">Co</span><h3>Copilot vs. omp</h3><strong>Geen verantwoord percentage</strong><p>Geen gecontroleerde directe tokenvergelijking gevonden in dit onderzoek. Onbekend betekent niet gelijk verbruik.</p></article><article class="onbekend-kaart"><span class="monogram" aria-hidden="true">Lu</span><h3>Lurus vs. omp</h3><strong>Geen verantwoord percentage</strong><p>Geen vergelijkbare directe meting gevonden. Leid geen verbruikssnelheid af uit de seatprijs.</p></article></div>
+    <details class="verdieping"><summary>Wat betekenen “61% minder tokens” en andere benchmarkclaims?</summary><div class="details-inhoud"><p>De omp-makerclaim van 61% betreft <strong>Grok 4 Fast-outputtokens</strong> bij een specifieke editproef met patch/replace/hashline. Niet alle input + output, modellen of maandfacturen. Een andere studie met Kimi K3 en business-app/MCP-taken gaf weer een andere volgorde. Model, taak en configuratie bepalen mee de uitkomst.</p><p>Strands is zelf harnessleverancier. Sommige kosten zijn geschat; scores sluiten errored runs uit terwijl de kostennoemer alle trials bevat. Dit is geen actuele seatbenchmark of tokens-per-seconde-meting en niet door ons herhaald.</p><p><a href="README.md#5-hoe-snel-verbruiken-de-harnesses-tokens-tegenover-omp">Onderzoek, scores en beperkingen ↗</a></p></div></details>
+    <details class="verdieping"><summary>Waarom lopen kosten op? En wat meet je in je eigen proef?</summary><div class="details-inhoud"><div class="stappen"><div class="stap"><span class="stap-nummer">1</span><div><strong>Context, denken en herstelwerk</strong><p>Herhaalde bestanden, reasoning, compaction en mislukte edits veroorzaken extra modelwerk. Caching kan geld besparen zonder minder tokens.</p></div></div><div class="stap"><span class="stap-nummer">2</span><div><strong>Parallel en op de achtergrond</strong><p>Subagents, reviewers, geheugen en cachewarming tellen ook mee. Sneller klaar betekent niet automatisch goedkoper.</p></div></div><div class="stap"><span class="stap-nummer">3</span><div><strong>Meet per geaccepteerde taak</strong><p>Gebruik dezelfde repositorysnapshot, taken en kwaliteitscriteria. Meet alle tokens, echte factuur, tijd en menselijke correctie. Houd model, reasoning en cachecondities waar mogelijk gelijk.</p></div></div></div><p class="formule">Tijd tot API-budget op is = resterend budget / gemeten kosten per actief uur</p><p>Voor abonnementen gelden daarnaast de eigen vijfuur-/weeklimieten. Een betrouwbare algemene omzetting naar werkdagen per seat bestaat hier niet.</p></div></details>
+  </section>
+  <p class="sr-only" id="melding" role="status" aria-live="polite" aria-atomic="true"></p>
+</main>
+<footer class="site-voet"><span>Peildatum <strong>4 november 2026</strong> · openbare lijstprijzen · geen offerte</span><div><button class="detail-knop" type="button" id="open-bronnen">Bronnen & onderzoeksgrenzen</button><a href="README.md">Volledige bevindingen ↗</a></div></footer>
+<dialog id="detaildialoog" aria-labelledby="detailtitel"><div class="dialoog-kop"><h2 id="detailtitel"></h2><button class="sluit-knop" type="button" data-close-dialog aria-label="Details sluiten">×</button></div><div id="detailinhoud"></div></dialog>
+<dialog id="bronnendialoog" aria-labelledby="bronnentitel"><div class="dialoog-kop"><h2 id="bronnentitel">Bronnen & grenzen</h2><button class="sluit-knop" type="button" data-close-dialog aria-label="Bronnen sluiten">×</button></div><p>Deze pagina vat het <a href="README.md">Nederlandstalige onderzoek</a> samen. De onderbouwing blijft beschikbaar in <a href="research/openai.en.md">OpenAI</a>, <a href="research/anthropic.en.md">Anthropic</a>, <a href="research/copilot.en.md">Copilot</a> en <a href="research/lurus-omp.en.md">Lurus/omp</a> (Engels).</p><p>Geen abonnementen aangekocht, productbenchmarks herhaald of echte facturen gemeten. Rekenhulpen zijn illustratief; prijzen, rollout en voorwaarden kunnen wijzigen. USD en EUR worden niet omgerekend. Peildatum: 4 november 2026.</p><ol class="bronnen-lijst" id="bronnen-lijst"></ol></dialog>
+</body>
+</html>

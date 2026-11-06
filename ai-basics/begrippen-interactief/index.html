@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI-agents, stap voor stap</title>
+<meta name="description" content="Interactieve begrippenlijst over AI-agents, voor beginners.">
+
+<!-- Lettertypes (Google Fonts) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Mulish:wght@300;400;500;700;800;900&display=swap">
+
+<!-- Onze eigen opmaak: eerst de basis, dan de pagina, dan de schema's -->
+<link rel="stylesheet" href="css/basis.css">
+<link rel="stylesheet" href="css/pagina.css">
+<link rel="stylesheet" href="css/visuals.css">
+
+<!-- =====================================================================
+     OPBOUW VAN DEZE PAGINA
+     index.html            dit bestand: leerpad en de scripts
+     css/basis.css         kleuren, lettertypes, knoppen, meldingen, animaties
+     css/pagina.css        intro, leerpad, delen en de begrip-voor-begrip gids
+     css/visuals.css       de schema's, per bestand in js/visuals/
+     js/hulp.js            hulpfuncties en het register VISUALS
+     js/inhoud.js          ALLE TEKST: intro, delen, begrippen, voorbeelden
+     js/visuals/*.js       één bestand per deel met de schema's van dat deel
+     js/app.js             bouwt de pagina op en regelt de navigatie
+
+     Tekst aanpassen:      js/inhoud.js
+     Volgorde aanpassen:   de volgorde van delen en begrippen in js/inhoud.js
+     Nieuw schema:         voeg VISUALS.naam toe in js/visuals/<deel>.js en
+                           zet  visual: 'naam'  bij het begrip in inhoud.js
+     ===================================================================== -->
+</head>
+
+<body>
+<nav class="leerpad" aria-label="Leerpad">
+  <div class="wrap leerpad-binnen">
+    <div class="leerpad-rij" id="leerpad-rij"></div>
+  </div>
+</nav>
+
+<main class="wrap" id="hoofdstukken"></main>
+
+<!-- Iconen -->
+<script src="https://cdn.jsdelivr.net/npm/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+
+<!-- Eerst de hulpfuncties, dan de inhoud, dan de schema's, als laatste de app -->
+<script src="js/hulp.js"></script>
+<script src="js/inhoud.js"></script>
+<script src="js/visuals/basis.js"></script>
+<script src="js/visuals/agent.js"></script>
+<script src="js/visuals/veiligheid.js"></script>
+<script src="js/visuals/uitbreiden.js"></script>
+<script src="js/visuals/sessies.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

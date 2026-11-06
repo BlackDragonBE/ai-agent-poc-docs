@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="nl" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Coding agents — vergelijk je werkwijze</title>
+<meta name="description" content="Verken vijf coding agents met interactieve vergelijkingskaarten en routes rond veiligheid, uitbreidingen en samenwerken.">
+<link rel="stylesheet" href="../ai-basics/begrippen-interactief/css/basis.css">
+<link rel="stylesheet" href="css/vergelijking.css">
+<script src="js/vergelijking.js" defer></script>
+</head>
+<body>
+<a class="overslaan" href="#werkbank">Naar de vergelijking</a>
+<header class="site-kop">
+  <a class="site-naam" href="../ai-basics/begrippen-interactief/index.html"><span class="terminal-merk" aria-hidden="true">&gt;_</span><span>AI in de praktijk<small>De coding-agentverkenner</small></span></a>
+  <h1>Coding agents <em>vergeleken</em></h1>
+  <div class="kop-acties"><a href="Coding-agents-vergelijking-NL.md">Brondocument ↗</a><button id="thema" class="icoon-knop" type="button" aria-label="Lichte weergave inschakelen" hidden>◐</button></div>
+</header>
+<main>
+
+  <section id="verkenner" hidden aria-label="Interactieve agentvergelijking">
+    <div class="route-balk"><span class="route-label">Begin met een vraag</span><div id="routes" class="routes" role="group" aria-label="Kies een verkenroute"></div></div>
+    <div class="werkbank" id="werkbank" tabindex="-1">
+      <aside class="onderwerpen">
+        <label class="zoek-label" for="zoekterm">Zoek een onderwerp</label>
+        <div class="zoekvak"><span aria-hidden="true">⌕</span><input type="search" id="zoekterm" placeholder="Zoek bv. MCP of debugger" autocomplete="off"></div>
+        <nav id="onderwerplijst" aria-label="Vergelijkingsonderwerpen"></nav>
+        <p id="zoek-status" class="noot" role="status"></p>
+        <button class="zij-bronnen" id="alle-bronnen" type="button">Documentatie & bronnen <span aria-hidden="true">↗</span></button>
+      </aside>
+      <div class="vergelijk-ruimte">
+        <div class="selectie-balk">
+          <div id="agentkeuze" class="agentkeuze" role="group" aria-label="Agents in de vergelijking"></div>
+          <button class="tekst-knop" id="alle-agents" type="button">Alle 5 vergelijken</button>
+        </div>
+        <div id="route-stappen" class="route-stappen" hidden aria-label="Stappen in de verkenroute"></div>
+        <section class="onderwerp-paneel" aria-labelledby="onderwerp-titel">
+          <div class="paneel-kop"><div><p class="eyebrow" id="onderwerp-groep"></p><h2 id="onderwerp-titel"></h2></div><span class="onderwerp-symbool" id="onderwerp-symbool" aria-hidden="true"></span></div>
+          <p class="onderwerp-vraag" id="onderwerp-vraag"></p>
+          <div id="agentkaarten" class="agentkaarten" role="region" aria-label="Vergelijkingskaarten"></div>
+          <div id="leeg" class="lege-staat" hidden><h3>Wie zet je naast elkaar?</h3><p>Selecteer hierboven minstens één agent om dit onderwerp te verkennen.</p><button class="knop primair" id="herstel-agents" type="button">Toon alle agents</button></div>
+          <p class="aandachtspunt" id="aandachtspunt"></p>
+          <div class="paneel-voet"><button class="stap-knop" id="vorige" type="button">← Vorige</button><span id="voortgang"></span><button class="stap-knop" id="volgende" type="button">Volgende →</button></div>
+        </section>
+        <p id="melding" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- De oorspronkelijke inhoud voedt de kaarten en blijft zonder JavaScript leesbaar. -->
+  <div id="broninhoud">
+    <noscript><p class="aandachtspunt">JavaScript is uitgeschakeld. Hieronder staat de volledige vergelijking als leestekst.</p></noscript>
+<article class="vergelijk-kaart">
+<h3>Profiel en werkomgeving</h3>
+<div class="tabel-scroll" role="region" aria-label="Profiel en werkomgeving" tabindex="0">
+<table><caption class="sr-only">Profiel en werkomgeving</caption>
+<thead>
+<tr><th scope="col">Agent</th><th scope="col">Sterk in</th><th scope="col">Werkomgeving / profiel</th></tr>
+</thead>
+<tbody>
+<tr data-agent="Codex"><th scope="row">Codex</th><td>Werken aan code vanuit terminal, editor of cloud.</td><td>Officiële VS Code-extensie.</td></tr>
+
+<tr data-agent="Claude Code"><th scope="row">Claude Code</th><td>Eigen workflows met skills, subagents, plugins, hooks en mods.</td><td>Terminal en officiële VS Code-extensie.</td></tr>
+
+<tr data-agent="Copilot"><th scope="row">Copilot</th><td>GitHub- en VS Code-integratie; ruime modelkeuze.</td><td>CLI, editor en cloudagent.</td></tr>
+
+<tr data-agent="Lurus Code"><th scope="row">Lurus Code</th><td>Geïntegreerde code-review en securityscans; model- en providerkeuze.</td><td>Lurus-platform.</td></tr>
+
+<tr data-agent="omp"><th scope="row">omp</th><td>Taalserver, debugger en uitgebreide aanpasbaarheid.</td><td>Terminal met programmeerbare extensies.</td></tr>
+</tbody></table>
+</div></article>
+<article class="vergelijk-kaart">
+<h3>Veiligheid</h3>
+<div class="tabel-scroll" role="region" aria-label="Veiligheid" tabindex="0">
+<table><caption class="sr-only">Veiligheid</caption>
+<thead>
+<tr><th scope="col">Agent</th><th scope="col">Belangrijkste verschil</th></tr>
+</thead>
+<tbody>
+<tr data-agent="Codex"><th scope="row">Codex</th><td>Afzonderlijke instellingen voor sandbox en goedkeuring; schrijfbevoegdheid is geen goedkeuring per edit. <a href="https://learn.chatgpt.com/docs/agent-approvals-security.md">Veiligheidsinstellingen</a></td></tr>
+
+<tr data-agent="Claude Code"><th scope="row">Claude Code</th><td>Planmodus en instelbare toolrechten; mods draaien met de rechten van de gebruiker. <a href="https://code.claude.com/docs/en/permissions.md">Permissies</a> · <a href="https://code.claude.com/docs/en/plugins/mods/overview">Mods</a></td></tr>
+
+<tr data-agent="Copilot"><th scope="row">Copilot</th><td>Rechten en goedkeuringen verschillen tussen CLI, editor en cloudagent. <a href="https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-command-reference">CLI</a></td></tr>
+
+<tr data-agent="Lurus Code"><th scope="row">Lurus Code</th><td>Ask/Plan en instelbare permissies; Ask/Plan blokkeren niet automatisch alle processen. <a href="https://code.lurus.ai/en/docs/permissions/">Permissies</a></td></tr>
+
+<tr data-agent="omp"><th scope="row">omp</th><td>Standaard YOLO; goedkeuring expliciet inschakelen met <code>--approval-mode always-ask-cached</code>. <a href="https://raw.githubusercontent.com/can1357/oh-my-pi/0b5c27ab24719c86a5986b95ee55f4e75bc1aaa0/docs/approval-mode.md">Approvalmodi</a></td></tr>
+</tbody></table>
+</div></article>
+<article class="vergelijk-kaart">
+<h3>Projectinstructies</h3>
+<div class="tabel-scroll" role="region" aria-label="Projectinstructies" tabindex="0">
+<table><caption class="sr-only">Projectinstructies</caption>
+<thead>
+<tr><th scope="col">Agent</th><th scope="col">Projectregels</th><th scope="col">Eigen prompt en stijl</th></tr>
+</thead>
+<tbody>
+<tr data-agent="Codex"><th scope="row">Codex</th><td><code>AGENTS.md</code> en <code>AGENTS.override.md</code>.</td><td><code>developer_instructions</code> en <code>model_instructions_file</code>. <a class="bronverwijzing" href="#bron-1" aria-label="Bron 1">[1]</a></td></tr>
+
+<tr data-agent="Claude Code"><th scope="row">Claude Code</th><td><code>CLAUDE.md</code>; ondersteuning voor <code>AGENTS.md</code> afhankelijk van versie.</td><td>Systeemprompt aanvullen of vervangen; output styles. <a class="bronverwijzing" href="#bron-2" aria-label="Bron 2">[2]</a></td></tr>
+
+<tr data-agent="Copilot"><th scope="row">Copilot</th><td><code>AGENTS.md</code> en Copilot-instructies; verschilt per omgeving.</td><td>Custom instructions en custom agents. <a class="bronverwijzing" href="#bron-3" aria-label="Bron 3">[3]</a></td></tr>
+
+<tr data-agent="Lurus Code"><th scope="row">Lurus Code</th><td><code>LURUS.md</code>; <code>AGENTS.md</code> expliciet importeren.</td><td>Projectregels en prompts voor custom agents. <a class="bronverwijzing" href="#bron-4" aria-label="Bron 4">[4]</a></td></tr>
+
+<tr data-agent="omp"><th scope="row">omp</th><td>Meerdere conventies, met eigen laadprioriteiten.</td><td><code>SYSTEM.md</code>, <code>APPEND_SYSTEM.md</code>, templates en personality-presets. <a class="bronverwijzing" href="#bron-5" aria-label="Bron 5">[5]</a></td></tr>
+</tbody></table>
+</div></article>
+<article class="vergelijk-kaart">
+<h3>Skills</h3>
+<div class="tabel-scroll" role="region" aria-label="Skills" tabindex="0">
+<table><caption class="sr-only">Skills</caption>
+<thead>
+<tr><th scope="col">Agent</th><th scope="col">Ondersteuning en verschil</th></tr>
+</thead>
+<tbody>
+<tr data-agent="Codex"><th scope="row">Codex</th><td>Skills, ook te bundelen in plugins. <a class="bronverwijzing" href="#bron-1" aria-label="Bron 1">[1]</a></td></tr>
+
+<tr data-agent="Claude Code"><th scope="row">Claude Code</th><td>Skills, los of als onderdeel van plugins. <a class="bronverwijzing" href="#bron-2" aria-label="Bron 2">[2]</a></td></tr>
+
+<tr data-agent="Copilot"><th scope="row">Copilot</th><td>Skills; CLI-plugins kunnen ze bundelen met agents en hooks. <a class="bronverwijzing" href="#bron-3" aria-label="Bron 3">[3]</a></td></tr>
+
+<tr data-agent="Lurus Code"><th scope="row">Lurus Code</th><td>Skills en GitHub-pakketten; externe skills starten inactief. <a class="bronverwijzing" href="#bron-4" aria-label="Bron 4">[4]</a></td></tr>
+
+<tr data-agent="omp"><th scope="row">omp</th><td>Skills met compatibiliteitsimports uit andere agentconventies. <a class="bronverwijzing" href="#bron-5" aria-label="Bron 5">[5]</a></td></tr>
+</tbody></table>
+</div></article>
+<article class="vergelijk-kaart">
+<h3>MCP</h3>
+<div class="tabel-scroll" role="region" aria-label="MCP" tabindex="0">
+<table><caption class="sr-only">MCP</caption>
+<thead>
+<tr><th scope="col">Agent</th><th scope="col">Ondersteuning en verschil</th></tr>
+</thead>
+<tbody>
+<tr data-agent="Codex"><th scope="row">Codex</th><td>MCP-integratie, ook via plugins. <a class="bronverwijzing" href="#bron-1" aria-label="Bron 1">[1]</a></td></tr>
+
+<tr data-agent="Claude Code"><th scope="row">Claude Code</th><td>MCP-integratie, los configureerbaar of gebundeld in plugins. <a class="bronverwijzing" href="#bron-2" aria-label="Bron 2">[2]</a></td></tr>
+
+<tr data-agent="Copilot"><th scope="row">Copilot</th><td>MCP-integratie; configuratie verschilt tussen CLI, editor en cloud. <a class="bronverwijzing" href="#bron-3" aria-label="Bron 3">[3]</a></td></tr>
+
+<tr data-agent="Lurus Code"><th scope="row">Lurus Code</th><td>MCP-integratie binnen de Lurus-workflow. <a class="bronverwijzing" href="#bron-4" aria-label="Bron 4">[4]</a></td></tr>
+
+<tr data-agent="omp"><th scope="row">omp</th><td>MCP-integratie met automatische discovery. <a class="bronverwijzing" href="#bron-5" aria-label="Bron 5">[5]</a></td></tr>
+</tbody></table>
+</div></article>
+<article class="vergelijk-kaart">
+<h3>Plugins / extensions</h3>
+<div class="tabel-scroll" role="region" aria-label="Plugins / extensions" tabindex="0">
+<table><caption class="sr-only">Plugins / extensions</caption>
+<thead>
+<tr><th scope="col">Agent</th><th scope="col">Uitbreidingsvorm</th></tr>
+</thead>
+<tbody>
+<tr data-agent="Codex"><th scope="row">Codex</th><td>Plugins voor onder meer skills, hooks en MCP-koppelingen. <a class="bronverwijzing" href="#bron-1" aria-label="Bron 1">[1]</a></td></tr>
+
+<tr data-agent="Claude Code"><th scope="row">Claude Code</th><td>Plugins bundelen onder meer skills, agents, hooks, MCP en output styles. <a class="bronverwijzing" href="#bron-2" aria-label="Bron 2">[2]</a></td></tr>
+
+<tr data-agent="Copilot"><th scope="row">Copilot</th><td>CLI-plugins en experimentele JavaScript-CLI-extensies; daarnaast VS Code-extensies. <a class="bronverwijzing" href="#bron-3" aria-label="Bron 3">[3]</a></td></tr>
+
+<tr data-agent="Lurus Code"><th scope="row">Lurus Code</th><td>Installeerbare skill- en agentpakketten; geen gelijkwaardig algemeen extensiesysteem bevestigd. <a class="bronverwijzing" href="#bron-4" aria-label="Bron 4">[4]</a></td></tr>
+
+<tr data-agent="omp"><th scope="row">omp</th><td>TypeScript/JavaScript-extensies voor tools, commando&#x27;s, interface en sessiegedrag. <a class="bronverwijzing" href="#bron-5" aria-label="Bron 5">[5]</a></td></tr>
+</tbody></table>
+</div></article>
+<article class="vergelijk-kaart">
+<h3>Hooks</h3>
+<div class="tabel-scroll" role="region" aria-label="Hooks" tabindex="0">
+<table><caption class="sr-only">Hooks</caption>
+<thead>
+<tr><th scope="col">Agent</th><th scope="col">Ondersteuning en verschil</th></tr>
+</thead>
+<tbody>
+<tr data-agent="Codex"><th scope="row">Codex</th><td>Lifecycle-hooks via <code>hooks.json</code>, <code>config.toml</code> of plugins. <a class="bronverwijzing" href="#bron-1" aria-label="Bron 1">[1]</a></td></tr>
+
+<tr data-agent="Claude Code"><th scope="row">Claude Code</th><td>Settings-hooks via shellcommando&#x27;s, HTTP of prompts; daarnaast interne functiehooks in mods. <a class="bronverwijzing" href="#bron-2" aria-label="Bron 2">[2]</a></td></tr>
+
+<tr data-agent="Copilot"><th scope="row">Copilot</th><td>Hooks in de CLI en cloudagent; ook te bundelen in CLI-plugins. <a class="bronverwijzing" href="#bron-3" aria-label="Bron 3">[3]</a></td></tr>
+
+<tr data-agent="Lurus Code"><th scope="row">Lurus Code</th><td>Eigen hooks voor workflowautomatisering. <a class="bronverwijzing" href="#bron-4" aria-label="Bron 4">[4]</a></td></tr>
+
+<tr data-agent="omp"><th scope="row">omp</th><td>Eventhandlers in extensies, onder meer voor sessies, agentgedrag en toolcalls. <a class="bronverwijzing" href="#bron-5" aria-label="Bron 5">[5]</a></td></tr>
+</tbody></table>
+</div></article>
+<article class="vergelijk-kaart">
+<h3>Mods</h3>
+<div class="tabel-scroll" role="region" aria-label="Mods" tabindex="0">
+<table><caption class="sr-only">Mods</caption>
+<thead>
+<tr><th scope="col">Agent</th><th scope="col">Mods en vergelijkbare runtime-aanpassingen</th></tr>
+</thead>
+<tbody>
+<tr data-agent="Codex"><th scope="row">Codex</th><td>Geen equivalent van Claude-mods bevestigd; wel plugins en lifecycle-hooks. <a class="bronverwijzing" href="#bron-1" aria-label="Bron 1">[1]</a></td></tr>
+
+<tr data-agent="Claude Code"><th scope="row">Claude Code</th><td>Officiële JavaScript/TypeScript-mods binnen Claude Code: prompts en toolcalls onderscheppen of herschrijven, interactieve UI toevoegen en ingebouwde functies vervangen. Installatie via plugins. <a class="bronverwijzing" href="#bron-2" aria-label="Bron 2">[2]</a></td></tr>
+
+<tr data-agent="Copilot"><th scope="row">Copilot</th><td>CLI-extensies voor eigen tools en slashcommando&#x27;s; gelijkwaardige UI- en runtime-overrides niet bevestigd. <a class="bronverwijzing" href="#bron-3" aria-label="Bron 3">[3]</a></td></tr>
+
+<tr data-agent="Lurus Code"><th scope="row">Lurus Code</th><td>Geen equivalent van Claude-mods bevestigd; skill- en agentpakketten zijn geen runtime-mods. <a class="bronverwijzing" href="#bron-4" aria-label="Bron 4">[4]</a></td></tr>
+
+<tr data-agent="omp"><th scope="row">omp</th><td>Vergelijkbare mogelijkheden via TypeScript/JavaScript-extensies: toolcalls onderscheppen, rendering aanpassen, commando&#x27;s en tools toevoegen en sessies beïnvloeden. <a class="bronverwijzing" href="#bron-5" aria-label="Bron 5">[5]</a></td></tr>
+</tbody></table>
+</div></article>
+<article class="vergelijk-kaart">
+<h3>Subagents / multi-agent</h3>
+<div class="tabel-scroll" role="region" aria-label="Subagents / multi-agent" tabindex="0">
+<table><caption class="sr-only">Subagents / multi-agent</caption>
+<thead>
+<tr><th scope="col">Agent</th><th scope="col">Ondersteuning en verschil</th></tr>
+</thead>
+<tbody>
+<tr data-agent="Codex"><th scope="row">Codex</th><td>Parallelle subagents met eigen threads; custom agents met eigen instructies, model en redeneerinstelling. <a class="bronverwijzing" href="#bron-7" aria-label="Bron 7">[7]</a></td></tr>
+
+<tr data-agent="Claude Code"><th scope="row">Claude Code</th><td>Subagents met eigen context, instructies en tools; dynamische workflows voor grotere groepen agents. <a class="bronverwijzing" href="#bron-8" aria-label="Bron 8">[8]</a></td></tr>
+
+<tr data-agent="Copilot"><th scope="row">Copilot</th><td>Parallelle subagents via <code>/fleet</code>; ook niet-interactief met <code>--fleet</code>. <a class="bronverwijzing" href="#bron-9" aria-label="Bron 9">[9]</a></td></tr>
+
+<tr data-agent="Lurus Code"><th scope="row">Lurus Code</th><td>Custom agents zijn read-only specialisten; aparte orchestrator met planner-, implementer- en reviewerrollen vereist ULTRA. <a class="bronverwijzing" href="#bron-10" aria-label="Bron 10">[10]</a></td></tr>
+
+<tr data-agent="omp"><th scope="row">omp</th><td>Parallelle subagents met eigen model en tools; gestructureerde resultaten en een Agent Hub om werk te volgen en bij te sturen. <a class="bronverwijzing" href="#bron-11" aria-label="Bron 11">[11]</a></td></tr>
+</tbody></table>
+</div></article>
+<article class="vergelijk-kaart">
+<h3>Debugging en verificatie</h3>
+<div class="tabel-scroll" role="region" aria-label="Debugging en verificatie" tabindex="0">
+<table><caption class="sr-only">Debugging en verificatie</caption>
+<thead>
+<tr><th scope="col">Agent</th><th scope="col">Ondersteuning en verschil</th></tr>
+</thead>
+<tbody>
+<tr data-agent="Codex"><th scope="row">Codex</th><td>Tests en checks via terminalopdrachten; aparte review van wijzigingen via <code>/review</code> of <code>codex review</code>. <a class="bronverwijzing" href="#bron-7" aria-label="Bron 7">[7]</a></td></tr>
+
+<tr data-agent="Claude Code"><th scope="row">Claude Code</th><td>Tests via de shell; browsercontrole via Claude in Chrome, inclusief consolelogs, DOM en gebruikersflows. <a class="bronverwijzing" href="#bron-8" aria-label="Bron 8">[8]</a></td></tr>
+
+<tr data-agent="Copilot"><th scope="row">Copilot</th><td>Tests via agenttools; CLI-browserautomatisering via Playwright-MCP en een aparte code-reviewagent. <a class="bronverwijzing" href="#bron-9" aria-label="Bron 9">[9]</a></td></tr>
+
+<tr data-agent="Lurus Code"><th scope="row">Lurus Code</th><td>Debugmodus, testgeneratie en TDD-workflows; ingebouwde code-review en securityscans. Debugmodus is niet hetzelfde als een aangesloten debugger. <a class="bronverwijzing" href="#bron-10" aria-label="Bron 10">[10]</a></td></tr>
+
+<tr data-agent="omp"><th scope="row">omp</th><td>Ingebouwde DAP-debugger voor onder meer breakpoints, stepping en variabeleninspectie; daarnaast taalserverdiagnostiek en tests via de shell. <a class="bronverwijzing" href="#bron-11" aria-label="Bron 11">[11]</a></td></tr>
+</tbody></table>
+</div></article>
+<article class="vergelijk-kaart">
+<h3>Context- en sessiebeheer</h3>
+<div class="tabel-scroll" role="region" aria-label="Context- en sessiebeheer" tabindex="0">
+<table><caption class="sr-only">Context- en sessiebeheer</caption>
+<thead>
+<tr><th scope="col">Agent</th><th scope="col">Ondersteuning en verschil</th></tr>
+</thead>
+<tbody>
+<tr data-agent="Codex"><th scope="row">Codex</th><td>Sessies hervatten met <code>resume</code>, vertakken met <code>fork</code> en context samenvatten met <code>/compact</code>. <a class="bronverwijzing" href="#bron-7" aria-label="Bron 7">[7]</a></td></tr>
+
+<tr data-agent="Claude Code"><th scope="row">Claude Code</th><td>Sessies hervatten en kopiëren met <code>--resume</code> en <code>--fork-session</code>; automatische of handmatige compactie en blijvend projectgeheugen. <a class="bronverwijzing" href="#bron-8" aria-label="Bron 8">[8]</a></td></tr>
+
+<tr data-agent="Copilot"><th scope="row">Copilot</th><td><code>/resume</code>, <code>/fork</code>, <code>/compact</code> en <code>/context</code>; sessiezijbalk voor wisselen tussen gesprekken. <a class="bronverwijzing" href="#bron-9" aria-label="Bron 9">[9]</a></td></tr>
+
+<tr data-agent="Lurus Code"><th scope="row">Lurus Code</th><td>Sessies hervatten, terugzoeken over projecten, context compacten en geheugen beheren; <code>/rewind chat</code> draait geen bestandswijzigingen terug. <a class="bronverwijzing" href="#bron-10" aria-label="Bron 10">[10]</a></td></tr>
+
+<tr data-agent="omp"><th scope="row">omp</th><td>Hervatten en vertakken, sessies uit Claude Code en Codex importeren, compactie en samenvattingen bij het wisselen van gesprekstak. <a class="bronverwijzing" href="#bron-11" aria-label="Bron 11">[11]</a></td></tr>
+</tbody></table>
+</div></article>
+<article class="vergelijk-kaart">
+<h3>Automatisering / headless</h3>
+<div class="tabel-scroll" role="region" aria-label="Automatisering / headless" tabindex="0">
+<table><caption class="sr-only">Automatisering / headless</caption>
+<thead>
+<tr><th scope="col">Agent</th><th scope="col">Ondersteuning en verschil</th></tr>
+</thead>
+<tbody>
+<tr data-agent="Codex"><th scope="row">Codex</th><td><code>codex exec</code> voor scripts en CI, JSONL-events en hervatbare runs; SDK en app-server voor integraties. <a class="bronverwijzing" href="#bron-7" aria-label="Bron 7">[7]</a></td></tr>
+
+<tr data-agent="Claude Code"><th scope="row">Claude Code</th><td><code>claude -p</code>, JSON/streaming en schema-uitvoer; Agent SDK voor Python en TypeScript. <a class="bronverwijzing" href="#bron-8" aria-label="Bron 8">[8]</a></td></tr>
+
+<tr data-agent="Copilot"><th scope="row">Copilot</th><td><code>copilot -p</code>, JSONL-uitvoer en <code>copilot workflow run</code> voor geregistreerde workflows. <a class="bronverwijzing" href="#bron-9" aria-label="Bron 9">[9]</a></td></tr>
+
+<tr data-agent="Lurus Code"><th scope="row">Lurus Code</th><td>Single prompts, batchbestanden, een langdurige <code>--pipe</code>-verbinding en aparte review-/securitycommando&#x27;s voor CI; JSON-uitvoer is NDJSON. <a class="bronverwijzing" href="#bron-10" aria-label="Bron 10">[10]</a></td></tr>
+
+<tr data-agent="omp"><th scope="row">omp</th><td><code>omp -p</code>, JSON-events, RPC en ACP; Bun-SDK voor directe aansturing van sessies en tools. <a class="bronverwijzing" href="#bron-11" aria-label="Bron 11">[11]</a></td></tr>
+</tbody></table>
+</div></article>
+<article class="vergelijk-kaart">
+<h3>Tokens en kosten</h3>
+<div class="tabel-scroll" role="region" aria-label="Tokens en kosten" tabindex="0">
+<table><caption class="sr-only">Tokens en kosten</caption>
+<thead>
+<tr><th scope="col">Agent</th><th scope="col">Praktisch verschil</th></tr>
+</thead>
+<tbody>
+<tr data-agent="Codex"><th scope="row">Codex</th><td>Context- en gebruiksinformatie beschikbaar. <a class="bronverwijzing" href="#bron-6" aria-label="Bron 6">[6]</a></td></tr>
+
+<tr data-agent="Claude Code"><th scope="row">Claude Code</th><td>Kosteninzicht; skills, plugins en subagents kunnen extra verbruik meebrengen. <a class="bronverwijzing" href="#bron-6" aria-label="Bron 6">[6]</a></td></tr>
+
+<tr data-agent="Copilot"><th scope="row">Copilot</th><td>Tokengebaseerde AI Credits volgens de aangehaalde documentatie. <a class="bronverwijzing" href="#bron-6" aria-label="Bron 6">[6]</a></td></tr>
+
+<tr data-agent="Lurus Code"><th scope="row">Lurus Code</th><td>Toont tokens en kosten; providerprijzen, opslag en credits afzonderlijk vergelijken. <a class="bronverwijzing" href="#bron-6" aria-label="Bron 6">[6]</a></td></tr>
+
+<tr data-agent="omp"><th scope="row">omp</th><td>Samengevatte reads en programmeerbare toolcalls; cache warming kan extra achtergrondverzoeken veroorzaken. <a class="bronverwijzing" href="#bron-6" aria-label="Bron 6">[6]</a></td></tr>
+</tbody></table>
+</div></article>
+    <section id="bronnen"><h2>Bronnen</h2><p>Geen betrouwbaar gezamenlijk klassement voor snelheid, kwaliteit of tokenverbruik beschikbaar. Functies veranderen: controleer de gelinkte documentatie.</p><ul class="bronnen-lijst">
+<li id="bron-1"><strong>[1] Codex:</strong> <a href="https://learn.chatgpt.com/docs/config-file/config-reference.md">Configuratie</a> · <a href="https://learn.chatgpt.com/docs/agent-configuration/agents-md.md">AGENTS.md</a> · <a href="https://developers.openai.com/codex/hooks">Hooks en pluginhooks</a></li>
+<li id="bron-2"><strong>[2] Claude Code:</strong> <a href="https://code.claude.com/docs/en/memory.md">Projectregels</a> · <a href="https://code.claude.com/docs/en/features-overview.md">Uitbreidingen</a> · <a href="https://code.claude.com/docs/en/plugins/overview">Plugins</a> · <a href="https://code.claude.com/docs/en/hooks">Hooks</a> · <a href="https://code.claude.com/docs/en/plugins/mods/overview">Mods</a> · <a href="https://claude.com/resources/articles/claude-code-mods">Aankondiging mods</a> · <a href="https://code.claude.com/docs/en/output-styles">Output styles</a></li>
+<li id="bron-3"><strong>[3] Copilot:</strong> <a href="https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-command-reference">CLI</a> · <a href="https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/add-custom-instructions">Instructies</a> · <a href="https://docs.github.com/en/enterprise-cloud@latest/copilot/concepts/agents/copilot-cli/about-cli-plugins">Plugins</a> · <a href="https://docs.github.com/en/copilot/concepts/agents/copilot-cli/about-cli-extensions">Extensies</a> · <a href="https://docs.github.com/en/copilot/concepts/customizations/hooks">Hooks</a></li>
+<li id="bron-4"><strong>[4] Lurus Code:</strong> <a href="https://code.lurus.ai/en/docs/rules-memory/">Projectregels</a> · <a href="https://code.lurus.ai/en/docs/custom-agents/">Custom agents</a> · <a href="https://code.lurus.ai/en/docs/skills/">Skills en pakketten</a> · <a href="https://code.lurus.ai/en/features/hooks/">Hooks</a> · <a href="https://code.lurus.ai/en/features/mcp/">MCP</a></li>
+<li id="bron-5"><strong>[5] omp:</strong> <a href="https://raw.githubusercontent.com/can1357/oh-my-pi/0b5c27ab24719c86a5986b95ee55f4e75bc1aaa0/docs/system-prompt-customization.md">Prompts en persoonlijkheid</a> · <a href="https://raw.githubusercontent.com/can1357/oh-my-pi/0b5c27ab24719c86a5986b95ee55f4e75bc1aaa0/docs/context-files.md">Contextbestanden</a> · <a href="https://raw.githubusercontent.com/can1357/oh-my-pi/0b5c27ab24719c86a5986b95ee55f4e75bc1aaa0/docs/extensions.md">Extensies en events</a></li>
+<li id="bron-6"><strong>[6] Tokens en kosten:</strong> <a href="https://learn.chatgpt.com/docs/developer-commands.md?surface=cli">Codex</a> · <a href="https://code.claude.com/docs/en/costs.md">Claude Code</a> · <a href="https://docs.github.com/en/copilot/concepts/billing-and-usage/individuals/billing">Copilot</a> · <a href="https://code.lurus.ai/en/docs/models-costs/">Lurus</a> · <a href="https://raw.githubusercontent.com/can1357/oh-my-pi/0b5c27ab24719c86a5986b95ee55f4e75bc1aaa0/docs/settings.md">omp</a></li>
+<li id="bron-7"><strong>[7] Codex-workflows:</strong> <a href="https://learn.chatgpt.com/docs/agent-configuration/subagents.md">Subagents</a> · <a href="https://learn.chatgpt.com/docs/developer-commands.md?surface=cli">CLI, review en sessies</a> · <a href="https://learn.chatgpt.com/docs/codex-sdk.md">SDK</a> · <a href="https://learn.chatgpt.com/docs/app-server.md">App-server</a></li>
+<li id="bron-8"><strong>[8] Claude Code-workflows:</strong> <a href="https://code.claude.com/docs/en/features-overview.md">Subagents en dynamische workflows</a> · <a href="https://code.claude.com/docs/en/chrome.md">Chrome</a> · <a href="https://code.claude.com/docs/en/sessions.md">Sessies</a> · <a href="https://code.claude.com/docs/en/context-window.md">Contextbeheer</a> · <a href="https://code.claude.com/docs/en/headless.md">Headless en SDK</a></li>
+<li id="bron-9"><strong>[9] Copilot-workflows:</strong> <a href="https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-command-reference">CLI-referentie: fleet, sessies, Playwright en programmatisch gebruik</a></li>
+<li id="bron-10"><strong>[10] Lurus Code-workflows:</strong> <a href="https://code.lurus.ai/en/docs/cli-commands/">CLI-referentie: tests, context, orchestration en automatisering</a> · <a href="https://code.lurus.ai/en/docs/custom-agents/">Custom-agentbeperkingen</a></li>
+<li id="bron-11"><strong>[11] omp-workflows:</strong> <a href="https://github.com/can1357/oh-my-pi/blob/0b5c27ab24719c86a5986b95ee55f4e75bc1aaa0/README.md">Debugger en subagents</a> · <a href="https://raw.githubusercontent.com/can1357/oh-my-pi/0b5c27ab24719c86a5986b95ee55f4e75bc1aaa0/docs/cli-reference.md">CLI en sessies</a> · <a href="https://raw.githubusercontent.com/can1357/oh-my-pi/0b5c27ab24719c86a5986b95ee55f4e75bc1aaa0/docs/task-agent-discovery.md">Agentconfiguratie</a> · <a href="https://raw.githubusercontent.com/can1357/oh-my-pi/0b5c27ab24719c86a5986b95ee55f4e75bc1aaa0/docs/compaction.md">Compactie</a> · <a href="https://raw.githubusercontent.com/can1357/oh-my-pi/0b5c27ab24719c86a5986b95ee55f4e75bc1aaa0/docs/sdk.md">SDK</a></li>
+    </ul></section>
+  </div>
+</main>
+<dialog id="bronnen-dialoog" aria-labelledby="bronnen-titel">
+  <div class="dialoog-kop"><div><p class="eyebrow">Controleer het bij de bron</p><h2 id="bronnen-titel">Documentatie</h2></div><button class="icoon-knop" id="sluit-bronnen" aria-label="Bronnen sluiten" type="button">×</button></div>
+  <p class="dialoog-uitleg">Verwijzingen uit het brondocument. Productfuncties kunnen veranderen; dit is geen live inventaris.</p>
+  <div id="bronnen-inhoud"></div>
+</dialog>
+<footer><span>Een keuzehulp, geen klassement.</span><a href="../ai-basics/begrippen-interactief/index.html">Eerst de begrippen ontdekken →</a></footer>
+</body>
+</html>

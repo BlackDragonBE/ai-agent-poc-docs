@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="1095.95000 747.94982 180.10000 180.10000" width="180.10000" height="180.10000"><title>cutout-05</title><defs>
+<clipPath id="clip_1">
+<path transform="matrix(1,0,0,-1,0,1440)" d="M0 0H2560V1440H0Z" />
+</clipPath>
+<clipPath id="clip_2">
+<path transform="matrix(1,0,0,-1,0,1440)" d="M0 0H2560V1440H0Z" />
+</clipPath>
+<clipPath id="clip_3">
+<path transform="matrix(1,0,0,-1,0,1440)" d="M0 0H2560V1440H0Z" />
+</clipPath>
+</defs>
+<path transform="matrix(1,0,0,-1,1096,747.9998)" d="M0 0V-180H142.449L180-120.862V-56.24L108.402 0Z" fill="#ff9100" />
+</svg>

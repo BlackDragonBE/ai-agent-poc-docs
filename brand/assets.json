@@ -1,0 +1,794 @@
+{
+  "schema_version": 1,
+  "source": {
+    "path": "../ProvincieAntwerpen_Guidelines.pdf",
+    "title": "Provincie Antwerpen — Stijlgids 2025",
+    "extracted_on": "2026-10-29"
+  },
+  "path_base": "Directory containing this manifest",
+  "usage_rules": "BRAND.md",
+  "preview": "preview.png",
+  "color_tokens": "brand.css",
+  "status": "PDF-derived vector assets, not original master files; extraction does not grant usage rights",
+  "logo_clear_space": "Not included in the tight crops; add half the symbol triangle width on every side",
+  "png_longest_side_px": 1600,
+  "references": [
+    {
+      "page": 12,
+      "path": "references/page-12.png"
+    },
+    {
+      "page": 13,
+      "path": "references/page-13.png"
+    },
+    {
+      "page": 20,
+      "path": "references/page-20.png"
+    },
+    {
+      "page": 30,
+      "path": "references/page-30.png"
+    },
+    {
+      "page": 31,
+      "path": "references/page-31.png"
+    },
+    {
+      "page": 32,
+      "path": "references/page-32.png"
+    },
+    {
+      "page": 42,
+      "path": "references/page-42.png"
+    },
+    {
+      "page": 43,
+      "path": "references/page-43.png"
+    },
+    {
+      "page": 52,
+      "path": "references/page-52.png"
+    },
+    {
+      "page": 58,
+      "path": "references/page-58.png"
+    },
+    {
+      "page": 62,
+      "path": "references/page-62.png"
+    }
+  ],
+  "assets": [
+    {
+      "id": "logo-nl-horizontal-color",
+      "category": "logos",
+      "svg": "assets/logos/logo-nl-horizontal-color.svg",
+      "png": "assets/logos/logo-nl-horizontal-color.png",
+      "source_page": 5,
+      "source_bounds_pt": [
+        810.4940063476563,
+        655.768115234375,
+        1456.3614013671875,
+        847.7978637695312
+      ],
+      "description": "Liggend Nederlands kleurenlogo; lichte achtergrond.",
+      "provenance": "PDF-vector-extraction; not an original master asset",
+      "source_drawing_indices": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39
+      ]
+    },
+    {
+      "id": "logo-nl-horizontal-white",
+      "category": "logos",
+      "svg": "assets/logos/logo-nl-horizontal-white.svg",
+      "png": "assets/logos/logo-nl-horizontal-white.png",
+      "source_page": 5,
+      "source_bounds_pt": [
+        1742.5665771484375,
+        655.9852172851563,
+        2388.436962890625,
+        848.0153930664062
+      ],
+      "description": "Liggend Nederlands wit logo; donkere of gekleurde achtergrond.",
+      "provenance": "PDF-vector-extraction; not an original master asset",
+      "source_drawing_indices": [
+        40,
+        41
+      ]
+    },
+    {
+      "id": "logo-nl-stacked-color",
+      "category": "logos",
+      "svg": "assets/logos/logo-nl-stacked-color.svg",
+      "png": "assets/logos/logo-nl-stacked-color.png",
+      "source_page": 6,
+      "source_bounds_pt": [
+        929.8893920898438,
+        544.3240234375,
+        1229.70966796875,
+        954.4808471679687
+      ],
+      "description": "Staand Nederlands kleurenlogo; lichte achtergrond.",
+      "provenance": "PDF-vector-extraction; not an original master asset",
+      "source_drawing_indices": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41
+      ]
+    },
+    {
+      "id": "logo-nl-stacked-white",
+      "category": "logos",
+      "svg": "assets/logos/logo-nl-stacked-white.svg",
+      "png": "assets/logos/logo-nl-stacked-white.png",
+      "source_page": 6,
+      "source_bounds_pt": [
+        1919.889453125,
+        544.3239013671875,
+        2219.84296875,
+        954.4824951171875
+      ],
+      "description": "Staand Nederlands wit logo; donkere of gekleurde achtergrond.",
+      "provenance": "PDF-vector-extraction; not an original master asset",
+      "source_drawing_indices": [
+        42,
+        43
+      ]
+    },
+    {
+      "id": "logo-en-horizontal-color",
+      "category": "logos",
+      "svg": "assets/logos/logo-en-horizontal-color.svg",
+      "png": "assets/logos/logo-en-horizontal-color.png",
+      "source_page": 7,
+      "source_bounds_pt": [
+        993.6443969726563,
+        536.0720703125,
+        1566.35517578125,
+        689.9134033203125
+      ],
+      "description": "Liggend kleurenlogo, taalcode en.",
+      "provenance": "PDF-vector-extraction; not an original master asset",
+      "source_drawing_indices": [
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77
+      ]
+    },
+    {
+      "id": "logo-fr-horizontal-color",
+      "category": "logos",
+      "svg": "assets/logos/logo-fr-horizontal-color.svg",
+      "png": "assets/logos/logo-fr-horizontal-color.png",
+      "source_page": 7,
+      "source_bounds_pt": [
+        993.6443969726563,
+        800.1708862304688,
+        1524.6878173828125,
+        941.9002807617187
+      ],
+      "description": "Liggend kleurenlogo, taalcode fr.",
+      "provenance": "PDF-vector-extraction; not an original master asset",
+      "source_drawing_indices": [
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115
+      ]
+    },
+    {
+      "id": "logo-de-horizontal-color",
+      "category": "logos",
+      "svg": "assets/logos/logo-de-horizontal-color.svg",
+      "png": "assets/logos/logo-de-horizontal-color.png",
+      "source_page": 7,
+      "source_bounds_pt": [
+        993.6443969726563,
+        1051.980517578125,
+        1511.31953125,
+        1206.1758544921875
+      ],
+      "description": "Liggend kleurenlogo, taalcode de.",
+      "provenance": "PDF-vector-extraction; not an original master asset",
+      "source_drawing_indices": [
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        155
+      ]
+    },
+    {
+      "id": "cutout-01",
+      "category": "cutouts",
+      "svg": "assets/cutouts/cutout-01.svg",
+      "png": "assets/cutouts/cutout-01.png",
+      "source_page": 40,
+      "source_bounds_pt": [
+        1095.95,
+        500.44981689453124,
+        1276.05,
+        680.5498168945312
+      ],
+      "description": "Voorgedefinieerde uitsnede; nummering links-rechts, boven-onder.",
+      "provenance": "PDF-vector-extraction; not an original master asset",
+      "source_drawing_indices": [
+        1
+      ]
+    },
+    {
+      "id": "cutout-02",
+      "category": "cutouts",
+      "svg": "assets/cutouts/cutout-02.svg",
+      "png": "assets/cutouts/cutout-02.png",
+      "source_page": 40,
+      "source_bounds_pt": [
+        1358.616748046875,
+        500.44981689453124,
+        1538.716748046875,
+        680.5498168945312
+      ],
+      "description": "Voorgedefinieerde uitsnede; nummering links-rechts, boven-onder.",
+      "provenance": "PDF-vector-extraction; not an original master asset",
+      "source_drawing_indices": [
+        2
+      ]
+    },
+    {
+      "id": "cutout-03",
+      "category": "cutouts",
+      "svg": "assets/cutouts/cutout-03.svg",
+      "png": "assets/cutouts/cutout-03.png",
+      "source_page": 40,
+      "source_bounds_pt": [
+        1621.283251953125,
+        500.44981689453124,
+        1801.383251953125,
+        680.5498168945312
+      ],
+      "description": "Voorgedefinieerde uitsnede; nummering links-rechts, boven-onder.",
+      "provenance": "PDF-vector-extraction; not an original master asset",
+      "source_drawing_indices": [
+        7
+      ]
+    },
+    {
+      "id": "cutout-04",
+      "category": "cutouts",
+      "svg": "assets/cutouts/cutout-04.svg",
+      "png": "assets/cutouts/cutout-04.png",
+      "source_page": 40,
+      "source_bounds_pt": [
+        1883.95,
+        500.44981689453124,
+        2064.05,
+        680.5498168945312
+      ],
+      "description": "Voorgedefinieerde uitsnede; nummering links-rechts, boven-onder.",
+      "provenance": "PDF-vector-extraction; not an original master asset",
+      "source_drawing_indices": [
+        6
+      ]
+    },
+    {
+      "id": "cutout-05",
+      "category": "cutouts",
+      "svg": "assets/cutouts/cutout-05.svg",
+      "png": "assets/cutouts/cutout-05.png",
+      "source_page": 40,
+      "source_bounds_pt": [
+        1095.95,
+        747.9498168945313,
+        1276.05,
+        928.0498168945312
+      ],
+      "description": "Voorgedefinieerde uitsnede; nummering links-rechts, boven-onder.",
+      "provenance": "PDF-vector-extraction; not an original master asset",
+      "source_drawing_indices": [
+        3
+      ]
+    },
+    {
+      "id": "cutout-06",
+      "category": "cutouts",
+      "svg": "assets/cutouts/cutout-06.svg",
+      "png": "assets/cutouts/cutout-06.png",
+      "source_page": 40,
+      "source_bounds_pt": [
+        1358.616748046875,
+        747.95,
+        1538.716748046875,
+        928.05
+      ],
+      "description": "Voorgedefinieerde uitsnede; nummering links-rechts, boven-onder.",
+      "provenance": "PDF-vector-extraction; not an original master asset",
+      "source_drawing_indices": [
+        4
+      ]
+    },
+    {
+      "id": "cutout-07",
+      "category": "cutouts",
+      "svg": "assets/cutouts/cutout-07.svg",
+      "png": "assets/cutouts/cutout-07.png",
+      "source_page": 40,
+      "source_bounds_pt": [
+        1621.283251953125,
+        747.76982421875,
+        1801.383251953125,
+        928.0498168945312
+      ],
+      "description": "Voorgedefinieerde uitsnede; nummering links-rechts, boven-onder.",
+      "provenance": "PDF-vector-extraction; not an original master asset",
+      "source_drawing_indices": [
+        8
+      ]
+    },
+    {
+      "id": "cutout-08",
+      "category": "cutouts",
+      "svg": "assets/cutouts/cutout-08.svg",
+      "png": "assets/cutouts/cutout-08.png",
+      "source_page": 40,
+      "source_bounds_pt": [
+        1883.95,
+        747.9498168945313,
+        2064.05,
+        928.0498168945312
+      ],
+      "description": "Voorgedefinieerde uitsnede; nummering links-rechts, boven-onder.",
+      "provenance": "PDF-vector-extraction; not an original master asset",
+      "source_drawing_indices": [
+        5
+      ]
+    },
+    {
+      "id": "cutline-pink",
+      "category": "cutlines",
+      "svg": "assets/cutlines/cutline-pink.svg",
+      "png": "assets/cutlines/cutline-pink.png",
+      "source_page": 50,
+      "source_bounds_pt": [
+        995.95,
+        303.95,
+        1364.05,
+        672.05
+      ],
+      "description": "Voorgedefinieerd snijlijnvlak met originele witte achtergrond.",
+      "provenance": "PDF-vector-extraction; not an original master asset",
+      "source_drawing_indices": [
+        19,
+        20,
+        21,
+        22
+      ]
+    },
+    {
+      "id": "cutline-red",
+      "category": "cutlines",
+      "svg": "assets/cutlines/cutline-red.svg",
+      "png": "assets/cutlines/cutline-red.png",
+      "source_page": 50,
+      "source_bounds_pt": [
+        1395.9498779296875,
+        303.95,
+        1764.0503662109375,
+        672.05
+      ],
+      "description": "Voorgedefinieerd snijlijnvlak met originele witte achtergrond.",
+      "provenance": "PDF-vector-extraction; not an original master asset",
+      "source_drawing_indices": [
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "id": "cutline-yellow",
+      "category": "cutlines",
+      "svg": "assets/cutlines/cutline-yellow.svg",
+      "png": "assets/cutlines/cutline-yellow.png",
+      "source_page": 50,
+      "source_bounds_pt": [
+        1795.95,
+        303.95,
+        2164.05,
+        672.0501220703125
+      ],
+      "description": "Voorgedefinieerd snijlijnvlak met originele witte achtergrond.",
+      "provenance": "PDF-vector-extraction; not an original master asset",
+      "source_drawing_indices": [
+        11,
+        12,
+        13,
+        14
+      ]
+    },
+    {
+      "id": "cutline-orange",
+      "category": "cutlines",
+      "svg": "assets/cutlines/cutline-orange.svg",
+      "png": "assets/cutlines/cutline-orange.png",
+      "source_page": 50,
+      "source_bounds_pt": [
+        995.95,
+        703.9498168945313,
+        1364.0509765625,
+        1072.05
+      ],
+      "description": "Voorgedefinieerd snijlijnvlak met originele witte achtergrond.",
+      "provenance": "PDF-vector-extraction; not an original master asset",
+      "source_drawing_indices": [
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "id": "cutline-green",
+      "category": "cutlines",
+      "svg": "assets/cutlines/cutline-green.svg",
+      "png": "assets/cutlines/cutline-green.png",
+      "source_page": 50,
+      "source_bounds_pt": [
+        1395.95,
+        703.95,
+        1764.05,
+        1072.05
+      ],
+      "description": "Voorgedefinieerd snijlijnvlak met originele witte achtergrond.",
+      "provenance": "PDF-vector-extraction; not an original master asset",
+      "source_drawing_indices": [
+        23,
+        24,
+        25,
+        26
+      ]
+    },
+    {
+      "id": "cutline-purple",
+      "category": "cutlines",
+      "svg": "assets/cutlines/cutline-purple.svg",
+      "png": "assets/cutlines/cutline-purple.png",
+      "source_page": 50,
+      "source_bounds_pt": [
+        1795.95,
+        703.95,
+        2164.050244140625,
+        1072.05
+      ],
+      "description": "Voorgedefinieerd snijlijnvlak met originele witte achtergrond.",
+      "provenance": "PDF-vector-extraction; not an original master asset",
+      "source_drawing_indices": [
+        15,
+        16,
+        17,
+        18
+      ]
+    },
+    {
+      "id": "pattern-pink",
+      "category": "patterns",
+      "svg": "assets/patterns/pattern-pink.svg",
+      "png": "assets/patterns/pattern-pink.png",
+      "source_page": 57,
+      "source_bounds_pt": [
+        1034.131640625,
+        988.8224975585938,
+        1178.49384765625,
+        1133.1841552734375
+      ],
+      "description": "Origineel tekstvrij patroonstaal; kleuren niet wijzigen, niet combineren met fotografie.",
+      "provenance": "PDF-vector-extraction; not an original master asset",
+      "source_drawing_indices": [
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57
+      ]
+    },
+    {
+      "id": "pattern-red",
+      "category": "patterns",
+      "svg": "assets/patterns/pattern-red.svg",
+      "png": "assets/patterns/pattern-red.png",
+      "source_page": 57,
+      "source_bounds_pt": [
+        1548.1986572265625,
+        988.8224975585938,
+        1692.5608642578125,
+        1133.1841552734375
+      ],
+      "description": "Origineel tekstvrij patroonstaal; kleuren niet wijzigen, niet combineren met fotografie.",
+      "provenance": "PDF-vector-extraction; not an original master asset",
+      "source_drawing_indices": [
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88
+      ]
+    },
+    {
+      "id": "pattern-orange",
+      "category": "patterns",
+      "svg": "assets/patterns/pattern-orange.svg",
+      "png": "assets/patterns/pattern-orange.png",
+      "source_page": 57,
+      "source_bounds_pt": [
+        2065.506640625,
+        988.8224975585938,
+        2209.86884765625,
+        1133.1841552734375
+      ],
+      "description": "Origineel tekstvrij patroonstaal; kleuren niet wijzigen, niet combineren met fotografie.",
+      "provenance": "PDF-vector-extraction; not an original master asset",
+      "source_drawing_indices": [
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119
+      ]
+    }
+  ]
+}

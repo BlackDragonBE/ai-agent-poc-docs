@@ -1,0 +1,33 @@
+/* Provincie Antwerpen, Stijlgids 2025, p. 30.
+   Eén kleurenset per ontwerp. Dit bestand laadt geen fonts of globale stijlen. */
+:root {
+  /* Gedeelde basiskleuren. */
+  --pa-warm-black: #140e0f;
+  --pa-white: #ffffff;
+
+  /* Primaire rode set. */
+  --pa-red-aubergine: #6f263d;
+  --pa-red-dark: #ba0c2f;
+  --pa-red-main: #e00036;
+  --pa-red-light: #f5d1cf;
+
+  /* Primaire roze set. */
+  --pa-pink-aubergine: #6f263d;
+  --pa-pink-dark: #eb467d;
+  --pa-pink-main: #ff7d9b;
+  --pa-pink-light: #f5ccd4;
+
+  /* Primaire oranje set. */
+  --pa-orange-dark: #e63c2d;
+  --pa-orange-main: #ff6b0d;
+  --pa-orange-yellow: #ff9100;
+  --pa-orange-light: #ffd4ba;
+
+  /* Projectkeuze: rode startset, geen verplichting uit de stijlgids. */
+  --pa-text: var(--pa-warm-black);
+  --pa-surface: var(--pa-white);
+  --pa-brand: var(--pa-red-main);
+  --pa-brand-dark: var(--pa-red-dark);
+  --pa-brand-deep: var(--pa-red-aubergine);
+  --pa-brand-light: var(--pa-red-light);
+}
